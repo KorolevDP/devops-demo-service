@@ -17,6 +17,7 @@ RUN mkdir /code
 WORKDIR /code
 
 COPY poetry.lock pyproject.toml /code/
+
 # Generate requirements.txt from poetry files
 RUN poetry export --without-hashes -f requirements.txt --output ./requirements.txt
 
