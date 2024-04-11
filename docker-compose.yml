@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3'
 
 services:
 
@@ -6,8 +6,8 @@ services:
   postgres:
     container_name: devops_demo_postgres_db
     image: postgres:13.0-alpine
-    environment:
-      - ./.env.postgres
+    env_file:
+      - .env.postgres
     networks:
       - devops
     volumes:
@@ -31,7 +31,7 @@ services:
     volumes:
       - .:/code
     env_file:
-      - ./.env.dev
+      - .env.dev
     depends_on:
       - postgres
     networks:
@@ -41,7 +41,7 @@ services:
   nginx:
     container_name: devops_demo_nginx
     build:
-      context: .
+      context: ./nginx
       dockerfile: nginx/Dockerfile
     ports:
       - "80:80"
