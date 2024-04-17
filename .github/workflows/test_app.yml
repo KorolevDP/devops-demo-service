@@ -47,14 +47,14 @@ jobs:
 
     - name : Extract metadata (tags, labels) for Docker
       id   : meta
-      uses : docker/metadata-action@v.4.0.0
+      uses : docker/metadata-action@v.5.1.0
       with :
           images: KorolevDP/devops-demo-service
           tags  : v1.${{ github.run_number }}
           value : "true"
 
     - name : Build and push Docker image
-      uses : docker/build-push-action@v.4.0.0
+      uses : docker/build-push-action@v.5.3.1
       with :
         source: .
         file  : ./Dockerfile
