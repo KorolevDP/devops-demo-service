@@ -50,8 +50,8 @@ jobs:
       uses : docker/metadata-action@v.5.5.1
       with :
           images: KorolevDP/devops-demo-service
-          tags : v1.${{ github.run_number }}
-          value: "true"
+          tags  : v1.${{ github.run_number }}
+          value : "true"
 
     - name : Build and push Docker image
       uses : docker/build-push-action@v.5.3.0
