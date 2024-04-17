@@ -58,5 +58,5 @@ jobs:
       with :
         source: .
         file  : ./Dockerfile
-        push  : "true"
+        push  : true
         tags  : ${{ steps.meta.outputs.tags }}
