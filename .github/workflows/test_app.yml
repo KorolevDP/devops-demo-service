@@ -54,7 +54,7 @@ jobs:
           value : "true"
 
     - name : Build and push Docker image
-      uses : docker/build-push-action@v5.3.1
+      uses : docker/build-push-action@v5
       with :
         source: .
         file  : ./Dockerfile
