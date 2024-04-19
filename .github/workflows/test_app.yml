@@ -8,9 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: docker
     env:
-      USERNAME: ${{ vars.DOCKER_LOGIN }}
-      PASSWORD: ${{ vars.DOCKER_PASSWORD }}
+      USERNAME: ${{ secrets.DOCKER_LOGIN }}
+      PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     steps:
     - name: Checkout repository
