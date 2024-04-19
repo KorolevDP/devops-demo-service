@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ vars.DOCKER_LOGIN }}
+      PASSWORD: ${{ vars.DOCKER_PASSWORD }}
 
     steps:
     - name: Checkout repository
