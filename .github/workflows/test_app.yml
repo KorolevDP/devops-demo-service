@@ -39,20 +39,17 @@ jobs:
     - name: Stop and remove web service
       run : docker compose down
 
-    - name: Log in to Docker Hub
-      env :
-            USERNAME: ${{ secrets.DOCKER_LOGIN }}
-            PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      uses: docker/login-action@v3.1.0
+    - name: Log in to Docker Hub   
+      uses: docker/login-action@v3
       with:
-        username: ${{ env.USERNAME }}
-        password: ${{ env.PASSWORD }}
+        username: ${{ secrets.DOCKER_LOGIN }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name : Extract metadata (tags, labels) for Docker
       id   : meta
       uses : docker/metadata-action@v5.1.0
       with :
-          images: KorolevDP/devops-demo-service
+          images: korolevdp/my-images
           tags  : v1.${{ github.run_number }}
           value : "true"
 
