@@ -1,4 +1,4 @@
-[![cov](https://we-cli.github.io/jayin/badges/coverage.svg)](https://github.com/we-cli/jayin/actions)
+[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KorolevDP/devops-demo-service/main/.github/badges/jacoco.json)](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml)
 
 # Описание тестового сервиса
 
