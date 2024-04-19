@@ -1,3 +1,6 @@
+Status of Last Building:<br>
+<img src="https://github.com/KorolevDP/devops-demo-service/workflows/Django-CI/badge.svg?branch=main"><br>
+
 
 # Описание тестового сервиса
 
