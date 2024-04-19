@@ -1,4 +1,4 @@
-[![Django-CI](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml/badge.svg)](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml)
+[![cov](https://we-cli.github.io/jayin/badges/coverage.svg)](https://github.com/we-cli/jayin/actions)
 
 # Описание тестового сервиса
 
