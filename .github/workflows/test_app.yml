@@ -62,3 +62,13 @@ jobs:
         push  : true
         tags  : ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Badge status
+      uses: emibcn/badge-action@v2.0.2
+      with:
+        label: 'Test coverage'
+        status: '53.4%'
+        color: 'blue,555,daf'
+        path: '.github/badges/coverage.svg'
+
+ 
