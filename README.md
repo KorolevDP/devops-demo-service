@@ -1,4 +1,4 @@
-![Django-CI](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml/badge.svg)
+![Django-CI](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml/badge.svg?event=push)
 
 # Описание тестового сервиса
 
