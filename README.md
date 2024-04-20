@@ -1,4 +1,3 @@
-[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KorolevDP/devops-demo-service/main/.github/badges/jacoco.json)](https://github.com/KorolevDP/devops-demo-service/actions/workflows/test_app.yml)
 
 # Описание тестового сервиса
 
