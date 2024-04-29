@@ -24,6 +24,7 @@
 `poetry run python  manage.py createsuperuser`
 После чего в интерактивном режиме ввести все запрашиваемые данные.
 
+
 ## Запуск тестов в виртуальном окружении
 Для запуска тестов локально в виртуальном окружении выполнить команду:
 `poetry run python manage.py test`
@@ -56,17 +57,40 @@ DB_PORT=5432
 
 ---
 # Выполнение поставленного задания.
----
 
 1. Был подготовлен docker-compose.yml файл, с помощью которого удалось запустить 3 контейнера с необходимыми сервисами:
-   - само веб-приложение
+   - Django-приложение
    - postgres
    - nginx
-     скрин с docker ps.
+
+ <p align="center">
+ <img width="1300px" src="screenshots/docker-ps.JPG" alt="docker-ps"/>
+</p>  
+
+Для запуска web-приложения, необходимые команды и миграции, реализованы в файле docker-compose.yml. В настройках образа web-приоложеения добавлена директива `command`.  
   
-  Так же был реализован усложненыный функционал. При вводе логина и пароля пользователя, мы попадаем в панель администрирования.
-  скриншоты из панели админа.
+  Так же был реализован усложненыный функционал.  
+  При переходе по ссылке http://localhost:8000/admin/ мы попадаем на панель авторизации админской части.
+ <p align="center">
+ <img width="1300px" src="screenshots/localhost-8000-adm.JPG" alt="log-adm"/>
+</p>  
+
+  При вводе логина и пароля, мы попадаем в панель администрирования.
+ <p align="center">
+ <img width="1300px" src="screenshots/admin-panel.JPG" alt="admin-panel"/>
+</p>  
 
 2. Был реализован CI процесс в **Github** для запуска тестов. Так же выполняется сборка docker-образа.
+ <p align="center">
+ <img width="1300px" src="screenshots/suscess-ci-cd.JPG" alt="suscess-ci-cd"/>
+</p>  
+  
+Успешный результат тестирования сервиса.
+ <p align="center">
+ <img width="1300px" src="screenshots/testing.JPG" alt="testing"/>
+</p>  
+
    В данном задании, так же был реализован усложненный функционал. Настроено тегирование собираемого образа и его деплой в docker-hub в открытый репозиторий.
-   скриншоты из докер хаба.
+<p align="center">
+ <img width="1300px" src="screenshots/docker-img-deliver.JPG" alt="tdocker-img-deliver"/>
+</p>
